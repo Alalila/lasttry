@@ -1,0 +1,91 @@
+/* Общие стили для всего сайта */
+body {
+    background-color: blue;
+    margin: 0;
+    background-image: url(bk.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Стили для заголовка на первой секции */
+h1 {
+    font-style: italic;
+    font-size: 100px;
+    color: yellow;
+    text-align: center;
+}
+
+/* Стили для кнопки */
+.button {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для изображений */
+.pic {
+    display: block;
+    margin: auto;
+    width: 1000px;
+    border: solid yellow;
+}
+
+/* Стили для текста на странице гимна */
+#text {
+    margin: auto;
+    width: fit-content;
+    font-size: 50px;
+    color: yellow;
+    background-color: rgba(0, 0, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Стили для гимна */
+#gymn {
+    margin: auto;
+    width: fit-content;
+    color: yellow;
+    background-color: rgba(0, 0, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Стили для блока с текстом гимна */
+.song {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(0, 0, 255, 0.7);
+    border-radius: 10px;
+    color: yellow;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Стили для таймера */
+#timer {
+    font-size: 30px;
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
