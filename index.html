@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyTokaev</title>
+        <link rel="stylesheet" href="try.css">
+    </head>
+    <body>
+        <!-- Первая секция с картинкой -->
+        <div id="intro">
+            <h1 class="button">CLICK TO SEE</h1>
+            <img src="https://th.bing.com/th/id/OIP.5YPfulljckrXgHK9gj5P9AHaFj?w=214&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="interesting" class="pic" onclick="showGymn()">
+        </div>
+
+        <!-- Вторая секция с гимном и музыкой, скрыта по умолчанию -->
+        <div id="gymnSection" style="display:none;">
+            <div id="timer">Loading...</div>
+            <a href="#gymn">
+                <img class="pic" src="нг токаев.png" alt="Нажмите для перехода">
+            </a>
+
+            <audio id="gimnAudio" src="gimn-kazahstana.mp3" controls autoplay></audio>
+
+            <h2 id="text">Kazakh's Gymn</h2>
+
+            <div id="gymn" class="song">
+                Алтын күн аспаны,<br>
+                Алтын дән даласы,<br>
+                Ерліктің дастаны,<br>
+                Еліме қарашы!<br>
+                Ежелден ер деген,<br>
+                Даңқымыз шықты ғой.<br>
+                Намысын бермеген,<br>
+                Қазағым мықты ғой!<br>
+                <br>
+                Қайырмасы:<br>
+                <br>
+                Менің елім, менің елім,<br>
+                Гүлің болып егілемін,<br>
+                Жырың болып төгілемін, елім!<br>
+                Туған жерім менің – Қазақстаным!<br>
+                <br>
+                Ұрпаққа жол ашқан,<br>
+                Кең байтақ жерім бар.<br>
+                Бірлігі жарасқан,<br>
+                Тәуелсіз елім бар.<br>
+                Қарсы алған уақытты,<br>
+                Мәңгілік досындай,<br>
+                Біздің ел бақытты,<br>
+                Біздің ел осындай!<br>
+                <br>
+                Қайырмасы:<br>
+                <br>
+                Менің елім, менің елім,<br>
+                Гүлің болып егілемін,<br>
+                Жырың болып төгілемін, елім!<br>
+                Туған жерім менің – Қазақстаным!<br>
+            </div>
+        </div>
+
+        <script>
+            // Функция для показа секции с гимном и начала воспроизведения музыки
+            function showGymn() {
+                document.getElementById('intro').style.display = 'none'; // Скрыть первую секцию
+                document.getElementById('gymnSection').style.display = 'block'; // Показать секцию с гимном
+                document.getElementById('gimnAudio').play(); // Запустить музыку
+            }
+
+            // Функция обновления таймера
+            function updateTimer() {
+                const now = new Date();
+                const nextYear = now.getFullYear() + 1;
+                const newYear = new Date(`January 1, ${nextYear} 00:00:00`);
+                const diff = newYear - now;
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                const timerElement = document.getElementById('timer');
+                timerElement.textContent = `До Нового года: ${days} дней, ${hours} часов, ${minutes} минут, ${seconds} секунд`;
+            }
+
+            setInterval(updateTimer, 1000);
+        </script>
+    </body>
+</html>
